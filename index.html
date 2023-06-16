@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Sender</title>
+</head>
+<body>
+    <h1>Email Sender</h1>
+    {% if result %}
+        <p>{{ result }}</p>
+    {% endif %}
+    <form method="POST" action="/">
+        <label for="email_addresses">Email Addresses:</label><br>
+        <textarea name="email_addresses" id="email_addresses" rows="5" cols="50" required></textarea><br><br>
+
+        <label for="smtp_server">SMTP Server:</label><br>
+        <input type="text" name="smtp_server" id="smtp_server" required><br><br>
+
+        <label for="smtp_port">SMTP Port:</label><br>
+        <input type="number" name="smtp_port" id="smtp_port" required><br><br>
+
+        <label for="sender_email">Sender Email:</label><br>
+        <input type="email" name="sender_email" id="sender_email" required><br><br>
+
+        <label for="sender_password">Sender Password:</label><br>
+        <input type="password" name="sender_password" id="sender_password" required><br><br>
+
+        <input type="submit" value="Send Emails">
+    </form>
+</body>
+</html>
